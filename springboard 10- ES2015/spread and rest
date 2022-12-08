@@ -1,0 +1,116 @@
+
+// MY SOLUTION
+// what i THINK i did wrong: did not use args, as it is my understanding that not doing so means we cannot return 
+// an object, and without using args we cannot convert nums to an array. 
+// curly brackets were not necessary b/c the arrow function was used
+// filterOutOdds was not converted from a function to a variable 
+// the answer uses 'v' for the Vue, which is, vue? 
+
+function filterOutOdds() {
+    return nums.filter(nums => nums % 2 === 0)
+};
+
+// solution
+const filterOutOdds = (...args) => args.filter(v => v %2 === 0)
+
+// MY SOLUTION for findMin 
+// const findMin = (....args) => args.Math.min()
+
+// yooooo i almost did it whatttt. 
+
+// solution
+const findMin = (...args) => Math.min(...args)
+
+
+// solution- I did need some support on this one but it makes sense that its simply two objects and in the 
+// object notation
+ const mergeObjects = (obj1, obj1) =({...obj1, ...obj2})
+
+// MY SOLUTION
+// const doubleAndReturnArgs = (...args) => [...arr, ...args.val => val * 2]
+// mistakes- didnt know that Vue was a thing, did not use map, my version would not have returned the original
+// array because i did not use map 
+
+// solution 
+const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map(v => v *2)]
+
+// solution (mine did not so much resemble this)
+
+const removeRandom = items => {   // names the function removeRandom, 'items' is parameter
+    let idx = Math.floor(Math.random() * items.length); // creates the variable for index 'idx', uses Math.floor
+    // to round to lowest number, as rounding up would be inappropriate as we may get the length of the original 
+    // uses Math.random() * items.length to find a random number between 0 and one less than the number of items 
+    return [...items.slice(0, idx), ...items.slice(idx + 1)] // slice means that original array will not be 
+    // modified, and returns a shallow copy of a portion of an array and converts into a new array object 
+    // selected from start to end. 
+    // syntax array.slice(start, end)
+}
+
+// to write solution clearer without my notes 
+
+const removeRandom = items => {
+    let idx = Math.floor(Math.random() * items.length);
+    return [...items.slice(0, idx), ...items.slice(idx + 1)]
+}
+
+
+// MY SOLUTION 
+
+const extend = (array1, array2) {
+    return newObject = (...array1, ...array2);
+};
+
+// CLOSE! no idea why i thought i should make the object into a variable 
+// and i even managed to do so incorrectly...
+const extend = (array, array2) => {
+    return [...array1, ...array2];
+}
+
+// my solution... 
+
+// const addKeyVal(obj, key, val) {
+//    return (...val) 
+// ??????????????????????????
+// }
+
+
+// explaining both solutions 
+
+// SOLUTION 1 
+ 
+const addKeyVal = (obj, key, val) => { // uses obj, key, val to find parameters
+    let newObj = { ...obj }  // creates a variable that adds the 'rest'of the objects into a new object
+    newObj[key] = val;  // newObj  replaces the key with the val in the final object???
+    return newObj; // returns new object
+}
+
+
+const removeKey = (obj, key) => {
+    let newObj = { ..obj }
+    delete newObj[key]
+    return newObj;
+}
+
+// MY SOLUTION 
+
+// const combine = (obj1, obj2) =>
+//    return (...obj1, ...obj2);
+// My solution was correct woooo! 
+
+const combine = (obj1, obj2) => 
+    return (...obj1, ...obj2);
+
+
+
+// MY SOLUTION
+
+// const update = (obj, key, val) => {
+//    ?????????
+// };
+
+const update = (obj, key, val) => {
+    let newObj = { ...obj }  // I guess by modify we are adding.. some new value to key? this one is not as clear 
+    newObj[key] = val;
+    return newObj;
+}
+

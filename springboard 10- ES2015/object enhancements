@@ -1,0 +1,72 @@
+// function createInstructor(firstName, lastName){
+//  return {
+//    firstName: firstName,
+//    lastName: lastName
+//  }
+// }
+
+// MY SOLUTION 
+
+function createInstructor(firstName, lastName) {
+    return {
+        firstName,
+        lastName
+    }
+}
+
+// correct
+
+// object enhancements per the instructional video
+
+
+// problem
+// var favoriteNumber = 42;  // variable of favoriteNumber
+
+//var instructor = {         // key
+//  firstName: "Colt" =      // object
+// }
+
+// instructor[favoriteNumber] = "That is my favorite!"
+
+// MY SOLUTION
+
+const instructor = {
+    firstName: "Colt",
+    sayHi() {
+        return "Hi!";
+    }                   // did not include comma. should have inserted comma bc both statements
+    sayBye() {            // are together   
+    return firstName + "says bye!";  // did not include "this", didn't use space 
+    }
+}
+
+
+// springboard solution 
+
+const instructor = {
+    firstName: "Colt",
+    sayHi() {
+        return "Hi!";
+    }, 
+    sayBye() {
+        return this.firstName + " says bye!";
+    }
+  }
+
+
+  // example of structure from colt
+  function _defineProperty(obj, key, value) {
+    obj[key] = value;
+    return obj;
+  }
+
+function createAnimal(species, verb, noise) {
+    return {
+        species, 
+        [verb] () {
+            return noise;
+        }  
+    }
+
+}
+

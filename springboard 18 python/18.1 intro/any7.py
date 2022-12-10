@@ -10,3 +10,12 @@ def any7(nums):
 
 print("should be true", any7([1, 2, 7, 4, 5]))
 print("should be false", any7([1, 2, 4, 5]))
+
+
+#my solution bc i take things too literally 
+
+def any7(nums):
+    if nums == 7:
+        print("should be true")
+    else:
+        print("should be false")

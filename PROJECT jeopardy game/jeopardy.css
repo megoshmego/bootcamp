@@ -1,0 +1,29 @@
+
+#jeopardy {
+  font-family: 'Tinos', serif;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+  font-size: 9pt;
+  background-color: #060ce9;
+  color: white;
+  border-collapse: collapse;
+}
+#jeopardy th, #jeopardy td {
+  border: solid 2px white;
+  width: 12em;
+  padding: 1em;
+}
+th {
+  text-transform: uppercase;
+  font-family: 'Tinos', serif;
+  font-weight: bold;
+  height: 4em;
+  text-shadow: black 1px 1px;
+}
+td {
+  height: 9em;
+  font-family: Copse, serif;
+}
+td:hover {
+  cursor: pointer;
+}

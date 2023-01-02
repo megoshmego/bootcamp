@@ -32,3 +32,7 @@ def truncate(phrase, n):
         return phrase
 
     return phrase[:n - 3] + "..."
+
+# the reason that this cuts off the truncating at a minimum is three is so that the 
+# solution of the problem fits the requirement that it includes a '...' at the end
+

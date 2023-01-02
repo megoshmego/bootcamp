@@ -28,3 +28,10 @@ def mode(nums):
     for (num, freq) in counts.items():
         if freq == max_value:
             return num
+        
+        
+#my solution
+    
+    def mode_number(lst):
+        result = max(lst)
+        print(result)

@@ -20,3 +20,9 @@ def find_the_duplicate(nums):
         if num in seen:
             return num
         seen.add(num)
+
+#my solution 
+
+from collections import Counter 
+new_list = list([item for item in d if d[item]>1])
+print(new_list)

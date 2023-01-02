@@ -23,3 +23,8 @@ def flip_case(phrase, to_swap):
         out += ltr
 
     return out
+
+#my answer 
+
+def flip_the_case(string):
+    string.swapcase()

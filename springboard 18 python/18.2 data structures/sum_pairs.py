@@ -33,3 +33,11 @@ def sum_pairs(nums, goal):
         already_visited.add(i)
 
     return ()
+
+#my version
+
+
+import itertools
+
+def pairsum(vals, target):
+    return sorted([(a, b) for a, b in itertools.combinations(vals, 2) if a + b == target])

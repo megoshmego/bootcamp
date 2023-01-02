@@ -7,3 +7,6 @@ def compact(lst):
 
     return [val for val in lst if val]
 
+
+def Remove_Falsy(List):
+    return list(filter(bool,List))

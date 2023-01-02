@@ -16,3 +16,13 @@ def multiple_letter_count(phrase):
     return counter
 
     
+#my solution
+
+from collections import Counter
+
+my_string = ""
+
+def frequency(my_string):
+        result = Counter(my_string)
+        print("the count of the characters in your phrase is :\n" + str(result))
+        
